@@ -49,4 +49,26 @@ public class Student {
     public String toString() {
         return getFirstName() + " " + getLastName();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Student student = (Student) o;
+
+        if (id != student.id) return false;
+        if (grade != student.grade) return false;
+        if (firstName != null ? !firstName.equals(student.firstName) : student.firstName != null) return false;
+        return lastName != null ? lastName.equals(student.lastName) : student.lastName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = firstName != null ? firstName.hashCode() : 0;
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + id;
+        result = 31 * result + grade;
+        return result;
+    }
 }
