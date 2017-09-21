@@ -18,11 +18,6 @@ public class Main {
             teachers.add(new Teacher("Teacher" + String.valueOf(i), "Lee", i));
         }
 
-        System.out.println(students);
-        System.out.println(teachers);
-
-
-
         // Group1
         Set<Student> group1 = new HashSet<>();
         for (int i = 0; i < 5; i++) {
@@ -51,6 +46,21 @@ public class Main {
         assignments.put(teachers.get(2), group3);
 
 
-        System.out.println(assignments);
+        //System.out.println(assignments);
+
+        // testing out what keySet() and values() do...
+//        System.out.println(assignments.keySet());
+//        System.out.println(assignments.values());
+        // looks like it literally just returns the keys and values respectively
+
+        for (Teacher teacher: assignments.keySet()) {
+            System.out.println(teacher);
+        }
+
+        for (Set student: assignments.values()) {
+            System.out.println(student);
+        }
+
+
     }
 }
