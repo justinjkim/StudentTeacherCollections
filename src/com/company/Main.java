@@ -9,6 +9,11 @@ public class Main {
 	// write your code here
         List<Student> students = new ArrayList<>();
 
-        
+        for (int i = 0; i < 15; i++) {
+
+            students.add(new Student("Student" + String.valueOf(i), "Kim", i));
+        }
+
+        System.out.println(students);
     }
 }
