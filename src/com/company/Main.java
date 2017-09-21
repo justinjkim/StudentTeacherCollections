@@ -53,14 +53,13 @@ public class Main {
 //        System.out.println(assignments.values());
         // looks like it literally just returns the keys and values respectively
 
-        for (Teacher teacher: assignments.keySet()) {
+        for (Teacher teacher : assignments.keySet()) {
             System.out.println(teacher);
+            for (Set student : assignments.values()) {
+                System.out.println(student);
+            }
         }
 
-        for (Set student: assignments.values()) {
-            System.out.println(student);
-        }
-
-
+        
     }
 }
